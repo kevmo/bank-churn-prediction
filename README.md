@@ -10,8 +10,12 @@ This project was inspired by and its dataset drawn from the [bank churn Kaggle c
 
 The code for this project is split across several different directories which are largely self-contained:
 
-`data` - This directory contains data used for training.  It also cont ains data (`test.csv`) which can be used to generate submissions for the associated Kaggle competition.
+`data` - This directory contains data used for training.  It also contains data (`test.csv`) which can be used to generate submissions for the associated Kaggle competition.
 
 `notebooks` - This directory contains a Jupyter notebook for exploring and preprocessing data. The notebook also contains code exploring several different models (Logistic Regression, a Random Forest Classifier) and tuning their hyperparameters. This folder contains its own Pipenv files, isolating data and model development work from the deployed prediction service.
 
 `scripts` - This directory contains `preprocess.py`, which contains functions for preprocessing data, which are importedd by the prediction `service `and `train.py`
+
+`service` - Dockerized Flask app that exposes the predicition service via a `/predict` endpoint.
+
+`testing` - Contains a Python script that utilizes the `/predict` endpoint
