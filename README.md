@@ -36,3 +36,17 @@ To train the model:
 cd scripts
 python train.py
 ```
+
+To run the prediction service:
+
+```
+docker build -t app .
+docker run -p 5000:5000 app
+```
+
+To generate the kaggle submission:
+
+```
+pipenv install
+python generate_submission.py
+```
