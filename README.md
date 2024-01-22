@@ -19,3 +19,20 @@ The code for this project is split across several different directories which ar
 `service` - Dockerized Flask app that exposes the predicition service via a `/predict` endpoint.
 
 `kaggle` - Contains a Python script that utilizes the `/predict` endpoint to generate a Kaggle submission file.
+
+## Working with the code
+
+To experiment with the notebook:
+
+```
+cd notebooks
+pipenv install
+jupyter notebook
+```
+
+To train the model:
+
+```
+cd scripts
+python train.py
+```
